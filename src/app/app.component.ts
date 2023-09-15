@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'TransferData';
 
-  messageTochild = 'Hello Child!';
-  messageFromParent = 'Hello from Parent';
+  messageTochild = 'Hello Child.....................!';
+  writeMsgInParentTS = "Child1 Hello Again.............!";
   // P to C @Output()
   messageFromChild1 = '';
   messageFromChild2 = '';

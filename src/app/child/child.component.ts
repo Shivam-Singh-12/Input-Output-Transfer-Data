@@ -11,7 +11,7 @@ export class ChildComponent {
   @Output() messageToParent = new EventEmitter<{ message1: string, message2: string }>();
 
   sendMessageToParent() {
-    const message1 = "Hello Parent!";
+    const message1 = "Hello Parent1!";
     const message2 = "Hello Parent2!";
     this.messageToParent.emit({ message1, message2 });
   }
