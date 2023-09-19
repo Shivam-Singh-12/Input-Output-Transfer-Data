@@ -19,6 +19,12 @@ export class AppComponent {
     this.messageFromChild2 = messages.message2;
   }
 
+  // Change detection Starategy
+  counter = 0;
+  onIncrement(){
+    this.counter++;
+  }
+
   //
   inputText = '';
   submittedTexts: string[] = [];

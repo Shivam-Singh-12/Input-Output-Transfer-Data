@@ -1,9 +1,10 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
-  styleUrls: ['./child.component.css']
+  styleUrls: ['./child.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChildComponent {
 
@@ -18,6 +19,11 @@ export class ChildComponent {
   constructor() { }
 
   ngOnInit() {
+  }
+  
+  executeFunction(){
+    console.log("Executing Child")
+    return "Hello Shivam this is TS of child testing for change detection";
   }
 
 }
