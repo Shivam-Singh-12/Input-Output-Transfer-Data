@@ -25,4 +25,13 @@ Enter Data :
 
 <div *ngFor="let submittedText of submittedTexts">
   {{ submittedText }}
-</div>
+</div> <br><br>
+
+<nav>
+  <h1>Transfer Data from service</h1>
+  <button>
+  <a routerLink="/sender">Sender</a> </button> &nbsp;
+  <button>
+  <a routerLink="/receiver">Receiver</a> <br></button>
+</nav>
+<router-outlet></router-outlet>
