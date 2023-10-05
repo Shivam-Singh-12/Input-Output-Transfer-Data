@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DataService } from '../data.service';
 
 @Component({
@@ -14,12 +14,22 @@ import { DataService } from '../data.service';
 })
 export class ReceiverComponent {
   receivedData: any;
+  receivedDataHere: string = '';
+
+  serviceClicked = false
+  subjectClicked = true
 
   constructor(private dataService: DataService) {
     
   }
-  
+  @Input() receivedDataa: string = '';
   ngOnInit() {
     this.receivedData = this.dataService.getData();
+    this.serviceClicked = true
+    this.subjectClicked = true
+    
+    this.dataService.data$.subscribe((data) => {
+      this.receivedDataa = data;
+    });
   }
 }

@@ -1,6 +1,11 @@
 <p>receiver works!</p>
 
-<div>
-    <h2>Data received in ReceiverComponent:</h2>
-    <pre>{{ receivedData | json }}</pre>
+<div *ngIf="serviceClicked">
+    <h2>service Receiver Component:</h2>
+    <pre>Received Data: {{ receivedData | json }}</pre>
+</div>
+
+<div *ngIf="subjectClicked">
+    <h2> Subject Receiver Component @Input:</h2>
+    <p>Received Data: {{ receivedDataa  }}</p>
 </div>

@@ -1,6 +1,13 @@
 <p>sender works!</p>
 
 <div>
+    <h2>service to transfer data</h2>
     <input [(ngModel)]="data" placeholder="Enter data" />
     <button (click)="sendData()">Send Data</button>
+</div>
+
+<div>
+    <h2>Subject to transfer data @Input</h2>
+    <input [(ngModel)]="inputData" (ngModelChange)="sendDatas()">
+    <app-receiver [receivedDataa]="receivedDataa"></app-receiver>
 </div>

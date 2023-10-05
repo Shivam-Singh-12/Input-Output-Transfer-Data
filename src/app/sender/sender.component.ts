@@ -16,10 +16,18 @@ import { Router } from '@angular/router';
 })
 export class SenderComponent {
   data: any;
+  dataToSend: string = '';
+
   constructor(private dataService: DataService, private router: Router) {}
 
   sendData() {
     this.dataService.setData(this.data);
     this.router.navigate(['/receiver']);
+  }
+  
+  inputData: string = '';
+  receivedDataa: string = '';
+  sendDatas() {
+    this.dataService.sendData(this.inputData);
   }
 }
